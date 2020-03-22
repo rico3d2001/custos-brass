@@ -1,0 +1,119 @@
+<mat-card class="local-card">
+ 
+
+  <form [formGroup]="resumoForm" *ngIf="projetoResumo$ | async as projeto"  (ngSubmit)="onSubmit()">
+
+    <mat-card-header>
+      <mat-card-title>RESUMO</mat-card-title>
+    </mat-card-header>
+
+    <mat-grid-list  cols="12" rowHeight="30px">
+
+      <mat-grid-tile [colspan]="3" [rowspan]="1">
+        <p style="text-align: left;">Project (Number & Name):</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="7" [rowspan]="1">
+        <p>{{projeto.cc}} - {{projeto.cliente}} - {{projeto.nome}}</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <p>DATES</p>
+      </mat-grid-tile>
+
+      <mat-grid-tile [colspan]="3" [rowspan]="1">
+        <p>Project Manager / Project control:</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <mat-form-field>
+          <input matInput placeholder="Gerente"  formControlName='Gerente' #gerente>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <mat-form-field>
+          <input matInput placeholder="Controlador"  formControlName='Controlador' #controlador>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <p>Fase do Projeto:</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <p>Projeto Conceitual</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <p>Start:</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1" class="mat-grid-tile-campo">
+        <mat-form-field>
+          <input matInput placeholder="Start" formControlName='Start' #start>
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile [colspan]="3" [rowspan]="1">
+        <p>Type:</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <p>Fixed Price / Lump Sum</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <p>Reimbursable</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <p>Others - details:</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <p>Approved Change Notices</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <p>PERIOD</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <p>Janeiro 2020</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <p>Contractual Completion:</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <p>13/01/2020</p>
+      </mat-grid-tile>
+
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <p>Total Gross Revenue (R$)</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-form-field>
+          <input matInput placeholder="ValorBruto" type="text"  formControlName="ValorBruto" #valorBruto>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-form-field>
+          <input matInput placeholder="PrecoFixo" type="text"  formControlName='PrecoFixo' #precoFixo>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-form-field>
+          <input matInput placeholder="ValorReembolsavel" type="number" formControlName='ValorReembolsavel' #valorReembolsavel>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <mat-form-field>
+          <input matInput placeholder="DetalhesDescritivos" formControlName='DetalhesDescritivos' #detalhesDescritivos>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <p>Status:</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="2" [rowspan]="1">
+        <p>Em andamento</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <p>Forecast Completion:</p>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="1" [rowspan]="1">
+        <p>13/02/2020</p>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+  </form>
+
+</mat-card>

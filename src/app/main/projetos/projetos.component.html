@@ -1,0 +1,17 @@
+<div fxFill>
+
+    <mat-tab-group mat-stretch-tabs class="mat-elevation-z4" fxFill>
+  
+      <mat-tab label="PROJETOS">
+  
+        <app-lst-projetos [lstprojetos$] = "projetos$" (respostaListaProjeto)="entrarProjeto($event)"></app-lst-projetos>
+        
+  
+      </mat-tab>
+      <mat-tab label="CADASTRO DE PROJETOS">
+  
+        <app-tbl-projetos *ngIf="show" [tblprojetos$] = "projetos$" (respostaTabelaProjeto)="submeteProjeto($event)"></app-tbl-projetos>
+  
+      </mat-tab>
+    </mat-tab-group>
+  </div>

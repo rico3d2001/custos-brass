@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+
+  .th_grande{
+    overflow: hidden;
+    width: 30%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .th_pequeno{
+    overflow: hidden;
+    width: 5%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }

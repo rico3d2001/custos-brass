@@ -1,0 +1,24 @@
+<div fxLayout="column" fxLayoutAlign="space-around stretch" style="padding: 20px; background: #f0f0f0">
+
+    <mat-form-field fxFlex>
+        <input matInput placeholder="Busca Projeto">
+    </mat-form-field>
+</div>
+
+<!--
+    <mat-list role="list">
+    <mat-list-item *ngFor="let p of (lstprojetos$ | async)">
+        <button mat-button color="primary" (click)="entraProjeto(p.numero_proposta)">
+            <mat-icon>get_app</mat-icon>
+        </button>
+          {{p.cc}} - {{p.cliente}} - {{p.nome}}
+    </mat-list-item>
+</mat-list>
+-->
+<mat-nav-list role="list">
+    <a mat-list-item *ngFor="let p of lstprojetos$ | async; let i=index" routerLink="/main/projetos/{{i}}">
+        <mat-icon mat-list-icon>get_app</mat-icon>
+        <h4 mat-line>{{p.nome}}</h4>
+        <h5 mat-line>{{p.cc}}-{{p.cliente}}</h5> 
+    </a>
+</mat-nav-list>
